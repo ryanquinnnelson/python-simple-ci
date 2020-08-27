@@ -32,8 +32,8 @@ jobs:
       run: |
         conda install flake8
         conda list
-        which flake8 || echo flake8 is not installed
-        ls -l $CONDA/bin/
+        which flake8 || echo flake8 is not available in the path
+        $CONDA/bin/flake8 .
     - name: Activate environment and test with pytest
       run: |
         eval "$(conda shell.bash hook)"  # See Note 1
