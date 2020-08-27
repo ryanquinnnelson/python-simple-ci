@@ -20,7 +20,7 @@ jobs:
         $CONDA/bin/conda update -n base -c defaults conda   # update conda first
         $CONDA/bin/conda env update --file environment_platformless.yml --name pythontemplate2
     - name: Activate environment
-      run: |g
+      run: |
         eval "$(conda shell.bash hook)"
         $CONDA/bin/conda activate pythontemplate2
 
