@@ -22,5 +22,5 @@ jobs:
     - name: Activate environment
       run: |
         eval "$(conda shell.bash hook)"
-        $CONDA/bin/conda activate pythontemplate2
+        #$CONDA/bin/conda activate pythontemplate2
 
