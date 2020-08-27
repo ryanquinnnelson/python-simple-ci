@@ -15,8 +15,4 @@ jobs:
       with:
         python-version: 3.8
     - name: Install dependencies
-      run: |
-        # $CONDA is an environment variable pointing to the root of the miniconda directory
-        $PWD
-        ls -l
-        echo this is a test
+      run: echo this is a test
