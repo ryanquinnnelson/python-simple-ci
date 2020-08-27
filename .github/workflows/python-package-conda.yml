@@ -22,6 +22,8 @@ jobs:
         python-version: 3.8
     - name: Update conda and create environment
       run: |
+        which conda || echo conda is not installed
+        echo $CONDA/bin/conda
         conda info
         conda update -n base -c defaults conda
         conda info
@@ -35,6 +37,8 @@ jobs:
         conda env list
         which pytest || echo pytest is not installed
         echo $CONDA/bin/pytest
+        conda install pytest
+        pytest
         
 
         
