@@ -22,16 +22,12 @@ jobs:
         python-version: 3.8
     - name: Update conda and create environment from file
       run: |
-        conda --version
         conda update -n base -c defaults conda
-        conda --version
-        conda env list
         conda env update --file environment_platformless.yml --name pythontemplate2
-        conda env list
     - name: Lint with flake8
       run: |
         conda install flake8
-        which flake8 || echo flake8 is not available in the path
+        # stop the build if there are Python syntax errors or undefined names
         $CONDA/bin/flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         $CONDA/bin/flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics

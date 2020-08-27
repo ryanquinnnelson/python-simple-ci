@@ -9,5 +9,5 @@ class PhoneBook:
     def lookup(self, name):
         return self.numbers[name]
 
-    def clear(self):
+    def clear():
         self.numbers.clear()
