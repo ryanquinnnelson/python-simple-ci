@@ -37,7 +37,6 @@ jobs:
         conda activate pythontemplate2   # workflow defaults to base conda environment in each step
         conda list
         conda install pytest
-        which pytest
         python -m pytest  # pytest run by itself cant find examplepackage module
         
 
