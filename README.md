@@ -29,5 +29,7 @@ Results in a slightly different list of dependencies.
 ```shell script
 $ pip freeze > requirements.txt
 
-$ pip install -r requirements.txt
+$ pip install -r requirements.txt   # install via pip
+
+$ while read req; do conda install --yes $req; done < requirements.txt  # install via conda
 ```
