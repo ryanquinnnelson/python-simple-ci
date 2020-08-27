@@ -1,4 +1,5 @@
 class PhoneBook:
+    """A phonebook."""
     def __init__(self):
         self.numbers = {}
 
