@@ -1,4 +1,4 @@
-from examplepackage.examplemodule import printSoup
+from examplepackage.examplemodule import print_soup
 
 
 def test_always_passes():
@@ -6,5 +6,5 @@ def test_always_passes():
 
 
 def test_beautifulsoup():
-    printSoup()
+    print_soup()
     assert True
