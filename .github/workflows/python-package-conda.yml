@@ -20,3 +20,4 @@ jobs:
         echo $PWD
         ls -l
         which conda
+        echo $CONDA
