@@ -20,4 +20,4 @@ jobs:
         echo $PWD
         ls -l
         $CONDA/bin/conda info
-        $CONDA/bin/conda env create -f environment.yml
+        $CONDA/bin/conda env create -f environment2.yml
