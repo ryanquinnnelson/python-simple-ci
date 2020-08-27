@@ -20,7 +20,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Update conda and create environment
+    - name: Update conda and create environment from file
       run: |
         conda --version
         conda update -n base -c defaults conda
@@ -31,9 +31,10 @@ jobs:
     - name: Lint with flake8
       run: |
         conda install flake8
-        conda list
         which flake8 || echo flake8 is not available in the path
-        $CONDA/bin/flake8 .
+        $CONDA/bin/flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        $CONDA/bin/flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Activate environment and test with pytest
       run: |
         eval "$(conda shell.bash hook)"  # See Note 1
