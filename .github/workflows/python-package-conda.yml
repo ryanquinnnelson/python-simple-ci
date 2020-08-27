@@ -16,11 +16,10 @@ jobs:
         python-version: 3.8
     - name: Update conda and install dependencies
       run: |
-        # $CONDA is an environment variable pointing to the root of the miniconda directory
-        $CONDA/bin/conda update -n base -c defaults conda   # update conda first
-        $CONDA/bin/conda env update --file environment_platformless.yml --name pythontemplate2
+        conda update -n base -c defaults conda
+        conda env update --file environment_platformless.yml --name pythontemplate2
     - name: Activate environment
       run: |
         eval "$(conda shell.bash hook)"
-        #$CONDA/bin/conda activate pythontemplate2
+        conda activate
 
