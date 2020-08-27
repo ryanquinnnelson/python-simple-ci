@@ -35,9 +35,8 @@ jobs:
       run: |
         eval "$(conda shell.bash hook)"  # see Note 1
         conda activate pythontemplate2   # workflow defaults to base conda environment in each step
-        conda list
         conda install pytest
-        python -m pytest  # pytest run by itself cant find examplepackage module
+        pytest  # pytest run by itself cant find examplepackage module
         
 
         
