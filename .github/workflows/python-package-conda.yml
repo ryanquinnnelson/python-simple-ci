@@ -32,7 +32,9 @@ jobs:
       run: |
         conda install flake8
         conda list
-        which flake8 || flake8 is not installed
+        which flake8 || echo flake8 is not installed
+        ls -l /usr/share/miniconda
+        echo $CONDA/bin/
     - name: Activate environment and test with pytest
       run: |
         eval "$(conda shell.bash hook)"  # See Note 1
