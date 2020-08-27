@@ -19,7 +19,5 @@ jobs:
         echo this is a test
         echo $PWD
         ls -l
-        which conda
-        echo $CONDA
-        conda info
         $CONDA/bin/conda info
+        $CONDA/bin/conda env create -f environment.yml
