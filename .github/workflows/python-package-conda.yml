@@ -31,8 +31,8 @@ jobs:
     - name: Lint with flake8
       run: |
         conda install flake8
+        conda list
         which flake8 || flake8 is not installed
-        ls -l $CONDA/bin/flake8
     - name: Activate environment and test with pytest
       run: |
         eval "$(conda shell.bash hook)"  # See Note 1
