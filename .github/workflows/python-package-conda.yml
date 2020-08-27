@@ -17,8 +17,8 @@ jobs:
     - name: Install dependencies using miniconda
       run: |
         # $CONDA is an environment variable pointing to the root of the miniconda directory
-        $CONDA/bin/conda list
         $CONDA/bin/conda update -n base -c defaults conda   # update conda first
         $CONDA/bin/conda env update --file environment_platformless.yml --name pythontemplate2
-        $CONDA/bin/conda info
-        $CONDA/bin/conda list
+        eval "$(conda shell.bash hook)"
+        conda activate pythontemplate2
+
