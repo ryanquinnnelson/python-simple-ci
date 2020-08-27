@@ -3,6 +3,7 @@
 
 ## sharing environments
 ### conda file readable by Windows, macOS, Linux
+Import this version when user has the same platform (Anaconda, Miniconda) as the author.
 ```shell script
 $ conda env export --name ENVNAME > envname.yml
 
@@ -17,7 +18,7 @@ $ conda create --name NEWENV --file pkgs.txt
 ```
 
 ### conda file with only the packages added by the user
-Use this version when other export options result in "ResolvePackageNotFound" when setting up a virtual environment.
+Import this version when other export options result in "ResolvePackageNotFound" when setting up a virtual environment.
 ```shell script
 $ conda env export --from-history -f envname_platformless.yml
 
@@ -25,7 +26,7 @@ $ conda env create --file envname.yml
 ```
 
 ### pip file
-Results in a slightly different list of dependencies.
+Import this version when using pip or when using conda and the conda yaml file is missing.
 ```shell script
 $ pip freeze > requirements.txt
 
