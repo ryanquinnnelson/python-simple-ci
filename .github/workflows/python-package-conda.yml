@@ -22,23 +22,19 @@ jobs:
         python-version: 3.8
     - name: Update conda and create environment
       run: |
-        which conda || echo conda is not installed
-        echo $CONDA/bin/conda
-        conda info
-        conda update -n base -c defaults conda
-        conda info
-        conda env list
-        conda env update --file environment_platformless.yml --name pythontemplate2
-        conda env list
+        $CONDA/bin/conda --version
+        $CONDA/bin/conda update -n base -c defaults conda
+        $CONDA/bin/conda --version
+        $CONDA/bin/conda env list
+        $CONDA/bin/conda env update --file environment_platformless.yml --name pythontemplate2
+        $CONDA/bin/conda env list
     - name: Test with pytest
       run: |
-        eval "$(conda shell.bash hook)"  # See Note 1
-        conda activate pythontemplate2
-        conda env list
-        which pytest || echo pytest is not installed
-        echo $CONDA/bin/pytest
-        conda install pytest
-        pytest
+        eval "$($CONDA/bin/conda shell.bash hook)"  # See Note 1
+        $CONDA/bin/conda activate pythontemplate2
+        $CONDA/bin/conda env list
+        $CONDA/bin/conda install pytest
+        $CONDA/bin/pytest
         
 
         
