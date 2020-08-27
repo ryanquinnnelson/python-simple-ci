@@ -1,5 +1,8 @@
 # pythontemplate2
-This project explores how to build an example Python package using industry-standard project organization and how to connect the project to Github CI for linting and unit testing.
+This project explores how to build an example Python package using  
+industry-standard project organization, and how to connect the project  
+to Github CI for linting and unit testing in both conda and pip virtual  
+environments.
 
 
 ## sharing the environment for this package
