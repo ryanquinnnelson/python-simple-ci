@@ -1,13 +1,6 @@
-class PhoneBook:
-    """A phonebook."""
-    def __init__(self):
-        self.numbers = {}
+from bs4 import BeautifulSoup
 
-    def add(self, name, number):
-        self.numbers[name] = number
 
-    def lookup(self, name):
-        return self.numbers[name]
-
-    def clear(self):
-        self.numbers.clear()
+def printSoup():
+    soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
+    print(soup.prettify())

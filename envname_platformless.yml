@@ -1,0 +1,8 @@
+name: pythontemplate2
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pytest
+  - beautifulsoup4
+prefix: /opt/anaconda3/envs/pythontemplate2
