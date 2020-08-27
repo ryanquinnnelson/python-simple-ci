@@ -1,6 +1,6 @@
 class PhoneBook:
     """A phonebook."""
-    def __init__():
+    def __init__(self):
         self.numbers = {}
 
     def add(self, name, number):
@@ -9,5 +9,5 @@ class PhoneBook:
     def lookup(self, name):
         return self.numbers[name]
 
-    def clear():
+    def clear(self):
         self.numbers.clear()
