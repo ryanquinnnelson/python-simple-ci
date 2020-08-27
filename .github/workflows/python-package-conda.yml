@@ -16,8 +16,6 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        echo this is a test
-        echo $PWD
-        ls -l
-        $CONDA/bin/conda info
-        $CONDA/bin/conda env create -f environment2.yml
+        conda update -n base -c defaults conda  #update conda
+        #$CONDA/bin/conda env create -f environment2.yml
+        $CONDA/bin/conda env update --file environment2.yml --name pythontemplate2
