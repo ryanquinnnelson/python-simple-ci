@@ -18,4 +18,9 @@ jobs:
       run: |
         # $CONDA is an environment variable pointing to the root of the miniconda directory
         $CONDA/bin/conda update -n base -c defaults conda   # update conda first
-        $CONDA/bin/conda env update --file environment_miniconda.yml --name pythontemplate2
+        $CONDA/bin/conda env update --file environment_platformless.yml --name pythontemplate2
+        $CONDA/bin/conda activate pythontemplate2
+    - name: Test with pytest
+      run: |
+        conda install pytest
+        $CONDA/bin/pytest
