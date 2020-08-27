@@ -1,0 +1,13 @@
+attrs @ file:///tmp/build/80754af9/attrs_1598374659300/work
+beautifulsoup4==4.9.1
+certifi==2020.6.20
+iniconfig @ file:///tmp/build/80754af9/iniconfig_1596827328212/work
+more-itertools==8.4.0
+packaging==20.4
+pluggy==0.13.1
+py @ file:///tmp/build/80754af9/py_1593446248552/work
+pyparsing==2.4.7
+pytest==6.0.1
+six==1.15.0
+soupsieve==2.0.1
+toml @ file:///tmp/build/80754af9/toml_1592853716807/work

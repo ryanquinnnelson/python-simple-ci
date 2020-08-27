@@ -36,7 +36,7 @@ jobs:
         eval "$(conda shell.bash hook)"  # see Note 1
         conda activate pythontemplate2   # workflow defaults to base conda environment in each step
         conda install pytest
-        pytest
+        python -m pytest
         
 
         
