@@ -24,7 +24,7 @@ jobs:
       run: |
         conda update -n base -c defaults conda
         conda install flake8
-        conda env update --file environment_platformless.yml --name pythontemplate2
+        conda env update --file platformless.yml --name pythontemplate2
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names

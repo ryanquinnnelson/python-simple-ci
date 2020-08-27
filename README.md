@@ -1,4 +1,5 @@
 # pythontemplate2
+This project explores how to build an example Python package using industry-standard project organization and how to connect the project to CI for linting and unit testing.
 
 
 ## sharing environments
