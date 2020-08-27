@@ -24,7 +24,6 @@ jobs:
       run: |
         conda update -n base -c defaults conda
         conda install flake8
-        conda install pytest
         conda env update --file environment_platformless.yml --name pythontemplate2
     - name: Lint with flake8
       run: |
@@ -36,7 +35,8 @@ jobs:
       run: |
         eval "$(conda shell.bash hook)"  # see Note 1
         conda activate pythontemplate2   # workflow defaults to base conda environment in each step
-        $CONDA/bin/pytest
+        conda install pytest
+        pytest
         
 
         
