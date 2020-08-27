@@ -26,7 +26,6 @@ jobs:
         conda install flake8
         conda install pytest
         conda env update --file environment_platformless.yml --name pythontemplate2
-        conda list
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names

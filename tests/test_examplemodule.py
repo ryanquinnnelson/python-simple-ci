@@ -1,4 +1,4 @@
-from src.examplepackage.examplemodule import printSoup
+from examplepackage.examplemodule import printSoup
 
 
 def test_always_passes():
