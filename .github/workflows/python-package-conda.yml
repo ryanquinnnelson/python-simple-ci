@@ -16,11 +16,13 @@ jobs:
         python-version: 3.8
     - name: Update conda and install dependencies
       run: |
+        conda info
         conda update -n base -c defaults conda
         conda env update --file environment_platformless.yml --name pythontemplate2
+        conda env list
     - name: Activate environment
       run: |
         eval "$(conda shell.bash hook)"
-        conda activate
-        conda info
+        conda activate pythontemplate2
+        conda env list
 
