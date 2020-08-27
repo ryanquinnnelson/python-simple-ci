@@ -21,3 +21,5 @@ jobs:
         ls -l
         which conda
         echo $CONDA
+        conda info
+        $CONDA/bin/conda info
