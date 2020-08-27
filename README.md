@@ -1,8 +1,8 @@
 # pythontemplate2
-This project explores how to build an example Python package using industry-standard project organization and how to connect the project to CI for linting and unit testing.
+This project explores how to build an example Python package using industry-standard project organization and how to connect the project to Github CI for linting and unit testing.
 
 
-## sharing environments
+## sharing the environment for this package
 ### conda file readable by Windows, macOS, Linux
 Import this version when user has the same platform (Anaconda, Miniconda) as the author.
 ```shell script
@@ -35,3 +35,9 @@ $ pip install -r requirements.txt   # install via pip
 
 $ while read req; do conda install --yes $req; done < requirements.txt  # install via conda
 ```
+
+## distributing this package
+### Anaconda Cloud
+(tbd)
+### PyPI
+(tbd)
