@@ -32,6 +32,6 @@ jobs:
         which pytest
         echo $CONDA/bin/pytest
         conda install pytest
-        pytestg
+        pytest
         
 
