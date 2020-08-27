@@ -1,0 +1,11 @@
+# This file was generated using `conda env export --from-history -f <filename>`.
+# This file only contains packages added by user to Anaconda environment.
+# Use this file when strict export of packages (`conda env export -f environment.yml `)
+# results in "ResolvePackageNotFound" when setting up a virtual environment.
+name: pythontemplate2
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pytest
+prefix: /opt/anaconda3/envs/pythontemplate2
