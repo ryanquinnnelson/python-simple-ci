@@ -26,17 +26,15 @@ jobs:
         conda env update --file environment_platformless.yml --name pythontemplate2
     - name: Lint with flake8
       run: |
-        conda install flake8
+        conda install flake8 > /dev/null
         # stop the build if there are Python syntax errors or undefined names
         $CONDA/bin/flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         $CONDA/bin/flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Activate environment and test with pytest
       run: |
-        eval "$(conda shell.bash hook)"  # See Note 1
-        conda env list
-        conda activate pythontemplate2
-        conda env list
+        eval "$(conda shell.bash hook)"  # see Note 1
+        conda activate pythontemplate2   # run tests inside chosen environment
         conda install pytest
         pytest
         
