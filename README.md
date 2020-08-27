@@ -20,9 +20,9 @@ $ conda create --name NEWENV --file pkgs.txt
 ### conda file with only the packages added by the user
 Import this version when other export options result in "ResolvePackageNotFound" when setting up a virtual environment.
 ```shell script
-$ conda env export --from-history -f envname_platformless.yml
+$ conda env export --from-history -f platformless.yml
 
-$ conda env create --file envname.yml
+$ conda env create --file platformless.yml
 ```
 
 ### pip file
