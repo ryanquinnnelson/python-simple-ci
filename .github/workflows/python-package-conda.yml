@@ -2,7 +2,7 @@
 # `conda activate <env>` fails with the following error: 
 # "CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'."
 # The current workaround is to use this command. 
-# Source: ga(https://www.kangzhiq.com/2020/05/02/how-to-activate-a-conda-environment-in-a-remote-machine/)
+# Source: (https://www.kangzhiq.com/2020/05/02/how-to-activate-a-conda-environment-in-a-remote-machine/)
 
 name: Python Package using Conda
 
@@ -34,6 +34,7 @@ jobs:
         conda env list
         conda activate pythontemplate2
         conda env list
+        conda --version
         conda install pytest
         pytest
         
